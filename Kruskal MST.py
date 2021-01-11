@@ -1,3 +1,6 @@
+import time
+import multiprocessing
+
 
 """Add edges in increasing weight, skipping those whose addition would create a cycle."""
 
@@ -11,7 +14,7 @@ Map = {'1-2': 853.40, '2-3': 160, '2-23': 933.9, '3-4': 170, '3-5': 158.7, '5-6'
 
 class Kruskal:
     def __init__(self, graph):
-        self.graph = self.graph = {tuple(i.split('-')): j for i, j in zip(graph.keys(), graph.values())}
+        self.graph = {tuple(i.split('-')): j for i, j in zip(graph.keys(), graph.values())}
         self.mst = []               # list that will contain the edges of the minimum spanning tree
 
         # the keys of the graph(dictionary) are the edges
@@ -67,4 +70,7 @@ class Kruskal:
         print(f'The Total weight of the Tree is {total}')
 
 
+start = time.time()
 Kruskal(Map)
+print(start - time.time())
+

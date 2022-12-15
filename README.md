@@ -1,10 +1,12 @@
 # Minimum Spanning Tree Algorithms
 
 Kruskal and Prim Minimum Spanning Tree Algorithms written in Python Object-Oriented Programming(OOP) style.
-
 Accepts the input graph as a dictionary with keys representing the edges of the graph and, the values their corresponding weight.\
 The vertices that make up an edge in the dictionary should be separated by a single character string like a '-'.
+
 ---
+
+## Example
 ```python
 from prim import Prim
 graph = {'1-2': 853.40, '2-3': 160, '2-23': 933.9, '3-4': 170, '3-5': 158.7, '5-6': 142.8, '4-8': 256.7, '6-7': 68.7,
